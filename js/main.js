@@ -195,9 +195,11 @@ var app = new Vue({
 });
 const progress = document.querySelector('#progress')
 const progressBar = document.querySelector('#progress-bar')
+const items = document.querySelector('#items')
 
 if(progressBar.style.width == '100%'){
   setTimeout(()=>{
     progress.style.display = 'none'
+    items.style.display = 'flex'
   }, 1000)
 }

@@ -79,9 +79,6 @@
                     </ul>
                     <p>Made with ❤️ <a href="https://www.youtube.com/channel/UCcq5Z3eGUNprtWgL7D5ZI0A" target="_blank">Gusti Cahya</a></p>
                 </div>
-                <div class="progress" id="progress" style="margin-top: 1.5rem">
-                    <div class="progress-bar bg-info" id="progress-bar" role="progressbar" :style="`width: ${loadingPercentage}%`"></div>
-                </div>
                 <div class="penyebaran">
                     <h2>Cek Penyebaran&nbsp;<span>Virus Covid19</span> <img src="./images/down.svg" alt="down"></h2>
                     <div class="description">
@@ -89,7 +86,10 @@
                         <p><img src="./images/source-data.svg" alt="source-data"> Sumber data dari John Hopkins University CSSE</p>
                     </div>
                     <h1>{{negara}}</h1>
-                    <div class="items">
+                    <div class="progress" id="progress">
+                        <div class="progress-bar bg-info" id="progress-bar" role="progressbar" :style="`width: ${loadingPercentage}%`"></div>
+                    </div>
+                    <div class="items" id="items" style="display:none">
                         <div class="item">
                             <label>Terinfeksi</label>
                             <p>{{detail.confirmed}} orang</p>
