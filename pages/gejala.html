@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cek Penyebaran Virus Corona atau cek Penyebaran Virus Covid19 di Indonesia">
+    <meta name="keywords" content="virus, corona, covid19, cek, penyebaran">
+    <meta name="author" content="Gusti Cahya">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Penyebaran Virus Corona atau Covid19</title>
+    <link rel="shortcut icon" href="../images/confirmed.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../library/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../library/vue.min.js"></script>
+    <script src="../library/axios.min.js"></script>
+    <script defer src="../js/main.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="row main">
+            <div class="col-md-4 navbar">
+                <div class="times" v-on:click="closeSearchMenu">
+                    <span>&times;</span>
+                </div>
+                <div class="search">
+                    <h1>Cari Negara</h1>
+                    <div class="search-input">
+                        <label for="search"><img src="../images/ion-search.svg" alt="search"></label>
+                        <input type="text" 
+                            id="search" 
+                            autocomplete="country-name" 
+                            autocapitalize="on" 
+                            placeholder="Search"
+                            v-on:keyup="cari"
+                        >
+                    </div>
+                </div>
+                <div class="world">
+                    <h1>Total di seluruh dunia</h1>
+                    <ul>
+                        <li><img src="../images/confirmed.svg" alt="sick people"><span> {{world.confirmed}} orang</span></li>
+                        <li><img src="../images/recovered.svg" alt="recovered people"><span class="recovered"> {{world.recovered}} orang</span></li>
+                        <li><img src="../images/death.svg" alt="death people"><span class="death"> {{world.deaths}} orang</span></li>
+                    </ul>
+                </div>
+                <div class="highest">
+                    <h1>Kasus Terbanyak</h1>
+                    <ul>
+                        <li v-for="({country, confirmed}, index) in dbListCountry" :key="index">
+                            <div class="list-highest" v-if="index < 3">
+                                <div class="number">
+                                    <span>{{index+1}}.</span>
+                                </div>
+                                <div class="country">
+                                    <h2>{{country}}</h2>
+                                    <p>{{confirmed}}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mobile-nav">
+                <img src="../images/awesome-search.svg" id="searchMenu" alt="search" v-on:click="searchMenu">
+                <a href="https://cekcovid19.online">cekcovid19<span class="online">.online</covid19<span></a>
+                <img src="../images/material-menu.svg" id="menu" alt="menu" v-on:click="menu">
+            </div>
+            <div class="col-md-8 display">
+                <div class="navigation">
+                    <div class="times" v-on:click="closeMenu">
+                        <span>&times;</span>
+                    </div>
+                    <ul>
+                        <li><a href="/">Dashboard</a></li>
+                        <li><a href="/pages/pencegahan.html">Pencegahan</a></li>
+                        <li><a href="/pages/gejala.html" class="active">Gejala</a></li>
+                        <li><a href="/pages/penularan.html">Penularan</a></li>
+                        <li><a href="#" title="Download aplikasi android Cek Covid19">Download</a></li>
+                    </ul>
+                    <p>Made with ❤️ <a href="https://www.youtube.com/channel/UCcq5Z3eGUNprtWgL7D5ZI0A" target="_blank">Gusti Cahya</a></p>
+                </div>
+                <div class="penyebaran">
+                    <h2>Gejala&nbsp;<span>Virus Corona atau Covid19</span> <img src="../images/down.svg" alt="down"></h2>
+                    <div class="artikel">
+                        <img src="../images/gejala.jpg" alt="pencegahan">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

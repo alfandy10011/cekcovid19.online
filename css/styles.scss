@@ -18,6 +18,9 @@
 }
 html{
     font-size: 62.5%;
+    @media only screen and (min-width: 120em){
+        font-size: 85%;
+    }
     @media only screen and (max-width: 70em){
         font-size: 50%;
     }
@@ -358,7 +361,16 @@ background: var(--color-tertiary-darken);
     background-color: var(--color-primary);
     padding: 4rem;
     margin-top: 2rem;
-    z-index: -999;
+    .artikel{
+        text-align: center;
+        video{
+            margin-top: 2.5rem;
+        }
+        img{
+            margin-top: 2.5rem;
+            width: 100%;
+        }
+    }
     h2{
         display: flex;
         align-items: center;

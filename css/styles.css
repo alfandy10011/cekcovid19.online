@@ -22,6 +22,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media only screen and (min-width: 120em) {
+  html {
+    font-size: 85%;
+  }
+}
+
 @media only screen and (max-width: 70em) {
   html {
     font-size: 50%;
@@ -516,7 +522,19 @@ body {
   background-color: var(--color-primary);
   padding: 4rem;
   margin-top: 2rem;
-  z-index: -999;
+}
+
+.penyebaran .artikel {
+  text-align: center;
+}
+
+.penyebaran .artikel video {
+  margin-top: 2.5rem;
+}
+
+.penyebaran .artikel img {
+  margin-top: 2.5rem;
+  width: 100%;
 }
 
 .penyebaran h2 {
