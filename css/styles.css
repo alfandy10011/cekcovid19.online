@@ -372,6 +372,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 22.5em) {
+  .mobile-nav {
+    min-width: 108vw;
+  }
+}
+
 .mobile-nav a {
   color: white;
   text-decoration: none;
@@ -554,6 +560,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 22.5em) {
+  .penyebaran h2 {
+    font-size: 2.8rem;
+  }
+}
+
 .penyebaran h2 span {
   color: var(--color-tertiary);
 }
@@ -591,6 +603,12 @@ body {
   }
 }
 
+@media only screen and (min-width: 22.5em) {
+  .penyebaran .description p {
+    font-size: 1rem;
+  }
+}
+
 .penyebaran h1 {
   text-align: center;
   font-size: 7.5rem;
@@ -622,6 +640,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 22.5em) {
+  .penyebaran .items .item label {
+    font-size: 1.6rem;
+  }
+}
+
 .penyebaran .items .item p {
   font-size: 1.8rem;
   font-weight: 600;
@@ -630,6 +654,12 @@ body {
 @media only screen and (max-width: 48em) {
   .penyebaran .items .item p {
     font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 22.5em) {
+  .penyebaran .items .item p {
+    font-size: 2.7rem;
   }
 }
 
@@ -675,6 +705,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 22.5em) {
+  .daftar-negara table {
+    font-size: 1.8rem;
+  }
+}
+
 .daftar-negara table .negara {
   padding-right: 20rem;
   font-weight: 600;
@@ -692,14 +728,24 @@ body {
   }
 }
 
+@media only screen and (max-width: 22.5em) {
+  .daftar-negara table .negara {
+    padding-right: 2rem;
+  }
+}
+
 @media only screen and (max-width: 20em) {
   .daftar-negara table .negara {
-    padding-right: 8rem;
+    padding-right: 5rem;
   }
 }
 
 .daftar-negara table thead {
   text-align: left;
+}
+
+.daftar-negara table thead .people-heading {
+  text-align: center;
 }
 
 .daftar-negara table thead th {
@@ -710,6 +756,10 @@ body {
 .daftar-negara table tbody {
   height: 3rem;
   overflow-y: auto;
+}
+
+.daftar-negara table tbody .people {
+  text-align: center;
 }
 
 .daftar-negara table tbody td {
@@ -726,6 +776,12 @@ body {
 
 @media only screen and (max-width: 26em) {
   .daftar-negara table tbody td {
+    padding-right: 4rem;
+  }
+}
+
+@media only screen and (max-width: 22.5em) {
+  .daftar-negara table tbody td:not(:first-of-type) {
     padding-right: 4rem;
   }
 }

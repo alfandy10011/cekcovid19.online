@@ -237,9 +237,6 @@ background: var(--color-tertiary-darken);
 }
 // display section
 .mobile-nav{
-    @media only screen and (min-width: 48em){
-        display: none;
-    }
     position: fixed;
     top: 0;
     margin: 0;
@@ -251,6 +248,12 @@ background: var(--color-tertiary-darken);
     justify-content: space-between;
     align-items: center;
     padding: 2rem 5rem;
+    @media only screen and (min-width: 48em){
+        display: none;
+    }
+    @media only screen and (max-width: 22.5em){
+        min-width: 108vw
+    }
     a{
         color: white;
         text-decoration: none;
@@ -379,6 +382,9 @@ background: var(--color-tertiary-darken);
         @media only screen and (max-width: 48em){
             font-size: 3.2rem;
         }
+        @media only screen and (max-width: 22.5em){
+            font-size: 2.8rem;
+        }
         span{
             color: var(--color-tertiary)
         }
@@ -398,6 +404,9 @@ background: var(--color-tertiary-darken);
             }
             @media only screen and (max-width: 48em){
                 font-size: 1.7rem;
+            }
+            @media only screen and (min-width: 22.5em){
+                font-size: 1rem;
             }
         }
     }
@@ -419,12 +428,18 @@ background: var(--color-tertiary-darken);
                 @media only screen and (max-width: 48em){
                     font-size: 2rem;
                 }
+                @media only screen and (max-width: 22.5em){
+                    font-size: 1.6rem;
+                }
             }
             p{
                 font-size: 1.8rem;
                 font-weight: 600;
                 @media only screen and (max-width: 48em){
                     font-size: 3.5rem;
+                }
+                @media only screen and (max-width: 22.5em){
+                    font-size: 2.7rem;
                 }
             }
         }
@@ -455,6 +470,9 @@ background: var(--color-tertiary-darken);
             margin-top: 3rem;
             font-size: 2.2rem;
         }
+        @media only screen and (max-width: 22.5em){
+            font-size: 1.8rem;
+        }
         .negara{
             padding-right: 20rem;
             font-weight: 600;
@@ -464,12 +482,18 @@ background: var(--color-tertiary-darken);
             @media only screen and (max-width: 26em){
                 padding-right: 10rem;
              }
+             @media only screen and (max-width: 22.5em){
+                padding-right: 2rem;
+             }
             @media only screen and (max-width: 20em){
-                padding-right: 8rem;
+                padding-right: 5rem;
              }
         }
         thead{
             text-align: left;
+            .people-heading{
+                text-align: center;
+            }
             th{
                 font-weight: normal;
                 padding-bottom: 1rem;
@@ -478,6 +502,9 @@ background: var(--color-tertiary-darken);
         tbody{
             height: 3rem;
             overflow-y: auto;
+            .people{
+                text-align: center;
+            }
             td{
                 padding-top: 1rem;
                 padding-bottom: 1rem;
@@ -487,6 +514,11 @@ background: var(--color-tertiary-darken);
                 }
                 @media only screen and (max-width: 26em){
                    padding-right: 4rem;
+                }
+                @media only screen and (max-width: 22.5em){
+                    &:not(:first-of-type){
+                        padding-right: 4rem;
+                    }
                 }
                 @media only screen and (max-width: 20em){
                    padding-right: 2rem;

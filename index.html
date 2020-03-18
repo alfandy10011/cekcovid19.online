@@ -107,18 +107,18 @@
                             <tr rowspan="2">
                                 <th>No.</th>
                                 <th class="negara">Negara</th>
-                                <th>Terinfeksi</th>
-                                <th>Sembuh</th>
-                                <th>Meninggal</th>
+                                <th class="people-heading">Terinfeksi</th>
+                                <th class="people-heading">Sembuh</th>
+                                <th class="people-heading">Meninggal</th>
                             </tr>
                         </thead>
                         <tbody v-for="{country, confirmed, recovered, deaths}, index in listCountry" :key="index">
                             <tr>
                                 <td>{{index+1}}</td>
                                 <td class="negara">{{country}}</td>
-                                <td>{{confirmed}}</td>
-                                <td>{{recovered}}</td>
-                                <td>{{deaths}}</td>
+                                <td class="people">{{confirmed}}</td>
+                                <td class="people">{{recovered}}</td>
+                                <td class="people">{{deaths}}</td>
                             </tr>
                         </tbody>
                     </table>
