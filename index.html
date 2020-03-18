@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cek Penyebaran Virus Corona atau cek Penyebaran Virus Covid19 di Indonesia">
+    <meta name="keywords" content="virus, corona, covid19, cek, penyebaran">
+    <meta name="author" content="Gusti Cahya">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Penyebaran Virus Corona atau Covid19</title>
+    <link rel="shortcut icon" href="./images/confirmed.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./library/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./library/vue.min.js"></script>
+    <script src="./library/axios.min.js"></script>
+    <script defer src="./js/main.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="row main">
+            <div class="col-md-4 navbar">
+                <div class="times" v-on:click="closeSearchMenu">
+                    <span>&times;</span>
+                </div>
+                <div class="search">
+                    <h1>Cari Negara</h1>
+                    <div class="search-input">
+                        <label for="search"><img src="./images/ion-search.svg" alt="search"></label>
+                        <input type="text" 
+                            id="search" 
+                            autocomplete="country-name" 
+                            autocapitalize="on" 
+                            placeholder="Search"
+                            v-on:keyup="cari"
+                        >
+                    </div>
+                </div>
+                <div class="world">
+                    <h1>Total di seluruh dunia</h1>
+                    <ul>
+                        <li><img src="./images/confirmed.svg" alt="sick people"><span> {{world.confirmed}} orang</span></li>
+                        <li><img src="./images/recovered.svg" alt="recovered people"><span class="recovered"> {{world.recovered}} orang</span></li>
+                        <li><img src="./images/death.svg" alt="death people"><span class="death"> {{world.deaths}} orang</span></li>
+                    </ul>
+                </div>
+                <div class="highest">
+                    <h1>Kasus Terbanyak</h1>
+                    <ul>
+                        <li v-for="({country, confirmed}, index) in dbListCountry" :key="index">
+                            <div class="list-highest" v-if="index < 3">
+                                <div class="number">
+                                    <span>{{index+1}}.</span>
+                                </div>
+                                <div class="country">
+                                    <h2>{{country}}</h2>
+                                    <p>{{confirmed}}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mobile-nav">
+                <img src="./images/awesome-search.svg" id="searchMenu" alt="search" v-on:click="searchMenu">
+                <a href="https://cekcovid19.online">cekcovid19<span class="online">.online</covid19<span></a>
+                <img src="./images/material-menu.svg" id="menu" alt="menu" v-on:click="menu">
+            </div>
+            <div class="col-md-8 display">
+                <div class="navigation">
+                    <div class="times" v-on:click="closeMenu">
+                        <span>&times;</span>
+                    </div>
+                    <ul>
+                        <li><a href="/" class="active">Dashboard</a></li>
+                        <li><a href="./pages/pencegahan.html">Pencegahan</a></li>
+                        <li><a href="./pages/gejala.html">Gejala</a></li>
+                        <li><a href="./pages/penanganan.html">Penanganan</a></li>
+                    </ul>
+                    <p>Made with ❤️ <a href="https://www.youtube.com/channel/UCcq5Z3eGUNprtWgL7D5ZI0A" target="_blank">Gusti Cahya</a></p>
+                </div>
+                <div class="penyebaran">
+                    <h2>Cek Penyebaran&nbsp;<span>Virus Covid19</span> <img src="./images/down.svg" alt="down"></h2>
+                    <div class="description">
+                        <p><img src="./images/clock.svg" alt="clock"> Last update {{detail.lastUpdate}}</p>
+                        <p><img src="./images/source-data.svg" alt="source-data"> Sumber data dari John Hopkins University CSSE</p>
+                    </div>
+                    <h1>{{negara}}</h1>
+                    <div class="items">
+                        <div class="item">
+                            <label>Terinfeksi</label>
+                            <p>{{detail.confirmed}} orang</p>
+                        </div>
+                        <div class="item">
+                            <label>Sembuh</label>
+                            <p class="recovered">{{detail.recovered}} orang</p>
+                        </div>
+                        <div class="item">
+                            <label>Meninggal</label>
+                            <p class="death">{{detail.deaths}} orang</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="daftar-negara">
+                    <h2>Daftar Negara yang Terinfeksi <img src="./images/down.svg" alt="down"></h2>
+                    <table id="myTable">
+                        <thead>
+                            <tr rowspan="2">
+                                <th>No.</th>
+                                <th class="negara">Negara</th>
+                                <th>Terinfeksi</th>
+                                <th>Sembuh</th>
+                                <th>Meninggal</th>
+                            </tr>
+                        </thead>
+                        <tbody v-for="{country, confirmed, recovered, deaths}, index in listCountry" :key="index">
+                            <tr>
+                                <td>{{index+1}}</td>
+                                <td class="negara">{{country}}</td>
+                                <td>{{confirmed}}</td>
+                                <td>{{recovered}}</td>
+                                <td>{{deaths}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
