@@ -501,17 +501,17 @@ background: var(--color-tertiary-darken);
             th{
                 font-weight: normal;
                 padding-bottom: 1rem;
-                padding-right: 8rem;
+                padding-right: 7rem;
                 font-weight: 600;
                 @media only screen and (max-width: 79.2em){
-                    padding-right: 6rem;
+                    padding-right: 5rem;
                  }
                  @media only screen and (max-width: 26em){
-                    padding-right: 4rem;
+                    padding-right: 3rem;
                  }
                  @media only screen and (max-width: 22.5em){
                      &:not(:first-of-type){
-                         padding-right: 4rem;
+                         padding-right: 2rem;
                      }
                  }
                  @media only screen and (max-width: 20em){

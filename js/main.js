@@ -112,7 +112,7 @@ var app = new Vue({
       var val = event.target.value;
 
       if (val == '') {
-        this.negara = "Seluruh Dunia";
+        this.negara = "🌎";
         this.detail.confirmed = this.world.confirmed;
         this.detail.recovered = this.world.recovered;
         this.detail.deaths = this.world.deaths;
