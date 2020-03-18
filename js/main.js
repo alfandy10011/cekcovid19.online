@@ -197,5 +197,7 @@ const progress = document.querySelector('#progress')
 const progressBar = document.querySelector('#progress-bar')
 
 if(progressBar.style.width == '100%'){
-  progress.style.display = 'block'
+  setTimeout(()=>{
+    progress.style.display = 'none'
+  }, 1000)
 }
