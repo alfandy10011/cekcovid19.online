@@ -542,6 +542,13 @@ body {
 .penyebaran .artikel img {
   margin-top: 2.5rem;
   width: 100%;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.penyebaran .artikel img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .penyebaran h2 {

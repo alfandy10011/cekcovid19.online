@@ -373,6 +373,10 @@ background: var(--color-tertiary-darken);
         img{
             margin-top: 2.5rem;
             width: 100%;
+            transition: .3s ease-in-out;
+        }
+        img:hover{
+            transform: scale(1.1)
         }
     }
     h2{
