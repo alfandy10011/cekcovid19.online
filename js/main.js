@@ -29,7 +29,9 @@ var app = new Vue({
       recovered: 0,
       deaths: 0
     }],
-    dbListCountry: []
+    dbListCountry: [],
+    refCount: 0,
+    isLoading: false
   },
   methods: {
     ambilDetail: function ambilDetail() {
@@ -148,9 +150,37 @@ var app = new Vue({
     closeMenu: function closeMenu() {
       var navigation = document.querySelector('.navigation');
       navigation.classList.remove('show');
+    },
+    setLoading(isLoading) {
+      if (isLoading) {
+        this.refCount++;
+        this.isLoading = true;
+      } else if (this.refCount > 0) {
+        this.refCount--;
+        this.isLoading = (this.refCount > 0);
+      }
     }
   },
   created: function created() {
+    axios.interceptors.request.use((config) => {
+      // trigger 'loading=true' event here
+      this.setLoading(true);
+      return config;
+    }, (error) => {
+      // trigger 'loading=false' event here
+      this.setLoading(false);
+      return Promise.reject(error);
+    });
+  
+    axios.interceptors.response.use((response) => {
+      // trigger 'loading=false' event here
+      this.setLoading(false);
+      return response;
+    }, (error) => {
+      // trigger 'loading=false' event here
+      this.setLoading(false);
+      return Promise.reject(error);
+    });
     this.ambilDetail();
     this.worldCase();
     this.getListCountry();
