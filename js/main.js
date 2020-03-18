@@ -33,6 +33,13 @@ var app = new Vue({
     refCount: 0,
     isLoading: false
   },
+  computed: {
+    loadingPercentage: function(){
+      let persen = Math.ceil(this.refCount/3 * 100)
+      persen -= 100
+      return Math.abs(persen)
+    }
+  },
   methods: {
     ambilDetail: function ambilDetail() {
       var _this = this;
@@ -186,3 +193,9 @@ var app = new Vue({
     this.getListCountry();
   }
 });
+const progress = document.querySelector('#progress')
+const progressBar = document.querySelector('#progress-bar')
+
+if(progressBar.style.width == '100%'){
+  progress.style.display = 'none'
+}

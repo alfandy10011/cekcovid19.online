@@ -9,6 +9,7 @@
     <title>Cek Penyebaran Virus Corona atau Covid19</title>
     <link rel="shortcut icon" href="./images/bacteria.png" type="image/x-icon">
     <link rel="stylesheet" href="./library/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./library/bootstrap.spinner.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./library/vue.min.js"></script>
     <script src="./library/axios.min.js"></script>
@@ -84,7 +85,10 @@
                         <p><img src="./images/clock.svg" alt="clock"> Last update {{detail.lastUpdate}}</p>
                         <p><img src="./images/source-data.svg" alt="source-data"> Sumber data dari John Hopkins University CSSE</p>
                     </div>
-                    <h1>{{(isLoading) ? refCount : negara}}</h1>
+                    <h1>{{negara}}</h1>
+                    <div class="progress" id="progress">
+                        <div class="progress-bar bg-info" id="progress-bar" role="progressbar" :style="`width: ${loadingPercentage}%`"></div>
+                    </div>
                     <div class="items">
                         <div class="item">
                             <label>Terinfeksi</label>
