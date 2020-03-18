@@ -719,19 +719,19 @@ body {
 }
 
 .daftar-negara table .negara {
-  padding-right: 20rem;
+  padding-right: 10rem;
   font-weight: 600;
 }
 
 @media only screen and (max-width: 79.2em) {
   .daftar-negara table .negara {
-    padding-right: 15rem;
+    padding-right: 8rem;
   }
 }
 
 @media only screen and (max-width: 26em) {
   .daftar-negara table .negara {
-    padding-right: 10rem;
+    padding-right: 6rem;
   }
 }
 
@@ -743,7 +743,7 @@ body {
 
 @media only screen and (max-width: 20em) {
   .daftar-negara table .negara {
-    padding-right: 5rem;
+    padding-right: 2rem;
   }
 }
 
@@ -758,6 +758,32 @@ body {
 .daftar-negara table thead th {
   font-weight: normal;
   padding-bottom: 1rem;
+  padding-right: 8rem;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 79.2em) {
+  .daftar-negara table thead th {
+    padding-right: 6rem;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  .daftar-negara table thead th {
+    padding-right: 4rem;
+  }
+}
+
+@media only screen and (max-width: 22.5em) {
+  .daftar-negara table thead th:not(:first-of-type) {
+    padding-right: 4rem;
+  }
+}
+
+@media only screen and (max-width: 20em) {
+  .daftar-negara table thead th {
+    padding-right: 2rem;
+  }
 }
 
 .daftar-negara table tbody {
@@ -766,6 +792,7 @@ body {
 }
 
 .daftar-negara table tbody .people {
+  width: 100%;
   text-align: center;
 }
 

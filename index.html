@@ -108,8 +108,8 @@
                                 <th>No.</th>
                                 <th class="negara">Negara</th>
                                 <th class="people-heading">Terinfeksi</th>
-                                <th class="people-heading">Sembuh</th>
-                                <th class="people-heading">Meninggal</th>
+                                <th class="people-heading recovered">Sembuh</th>
+                                <th class="people-heading death">Meninggal</th>
                             </tr>
                         </thead>
                         <tbody v-for="{country, confirmed, recovered, deaths}, index in listCountry" :key="index">

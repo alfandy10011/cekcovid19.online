@@ -84,14 +84,14 @@ var app = new Vue({
             arr.push({
               country: response.data[i].countryRegion,
               confirmed: response.data[i].confirmed,
-              recovered: response.data[i].recovered + response.data[i].active,
+              recovered: response.data[i].recovered,
               deaths: response.data[i].deaths
             });
           } else {
             arr.map(function (item) {
               if (item.country === response.data[i].countryRegion) {
                 item.confirmed += response.data[i].confirmed;
-                item.recovered += response.data[i].recovered + response.data[i].active;
+                item.recovered += response.data[i].recovered;
                 item.deaths += response.data[i].deaths;
               }
             });
