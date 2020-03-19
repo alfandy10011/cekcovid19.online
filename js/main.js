@@ -42,30 +42,18 @@ var app = new Vue({
   },
   methods: {
     ambilDetail: function ambilDetail() {
-      var _this = this;
-
-      var link = "https://covid19.mathdro.id/api/countries/".concat(this.negara);
-      axios.get(link).then(function (response) {
-        _this.detail.confirmed = response.data.confirmed.value;
-        _this.detail.recovered = response.data.recovered.value;
-        _this.detail.deaths = response.data.deaths.value;
-        var d = new Date(response.data.lastUpdate);
-        var dtf = new Intl.DateTimeFormat('en', {
-          year: 'numeric',
-          month: 'long',
-          day: '2-digit'
-        });
-
-        var _dtf$formatToParts = dtf.formatToParts(d),
-            _dtf$formatToParts2 = _slicedToArray(_dtf$formatToParts, 5),
-            mo = _dtf$formatToParts2[0].value,
-            da = _dtf$formatToParts2[2].value,
-            ye = _dtf$formatToParts2[4].value;
-
-        _this.detail.lastUpdate = "".concat(da, " ").concat(mo, " ").concat(ye);
-      }).catch(function (err) {
-        return console.log(err);
-      });
+      let link = `https://covid19.mathdro.id/api/countries/${this.negara}`
+      axios.get(link).then((response)=>{
+          this.detail.confirmed = response.data.confirmed.value
+          this.detail.recovered = response.data.recovered.value
+          this.detail.deaths = response.data.deaths.value
+          const d = new Date(response.data.lastUpdate)
+          const dtf = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit', hour: 'numeric', minute: 'numeric', second: 'numeric'}) 
+          const [{ value: mo },,{ value: da },,{ value: ye },,{value:hour},,{value:minute},,{value:second}] = dtf.formatToParts(d) 
+          console.log(dtf.formatToParts(d));
+          
+          this.detail.lastUpdate = `${da} ${mo} ${ye} ${hour}:${minute}:${second}`
+      }).catch((err)=>console.log(err))
     },
     worldCase: function worldCase() {
       var _this2 = this;
