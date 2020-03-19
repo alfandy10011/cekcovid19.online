@@ -201,5 +201,5 @@ if(progressBar.style.width == '100%'){
   setTimeout(()=>{
     progress.style.display = 'none'
     items.style.display = 'flex'
-  }, 1000)
+  }, 3000)
 }
