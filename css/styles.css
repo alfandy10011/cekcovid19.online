@@ -85,6 +85,10 @@ body {
   background: var(--color-tertiary-darken);
 }
 
+.treatment {
+  color: #242424;
+}
+
 .recovered {
   color: var(--color-success);
 }
@@ -95,6 +99,7 @@ body {
 
 @media only screen and (max-width: 48em) {
   .show {
+    opacity: 1 !important;
     -webkit-transform: translate(0%) !important;
             transform: translate(0%) !important;
   }
@@ -109,10 +114,11 @@ body {
 
 .navbar .times {
   position: absolute;
-  top: 0;
-  left: 10;
+  top: 1rem;
+  left: 6rem;
   font-size: 8rem;
   font-weight: bold;
+  z-index: 9999;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -120,7 +126,7 @@ body {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48.1em) {
   .navbar .times {
     display: none;
   }
@@ -366,7 +372,7 @@ body {
   padding: 2rem 5rem;
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48.1em) {
   .mobile-nav {
     display: none;
   }
@@ -422,7 +428,7 @@ body {
   display: none;
 }
 
-@media only screen and (max-width: 47.9em) {
+@media only screen and (max-width: 48em) {
   .navigation {
     position: fixed;
     top: 0;
@@ -430,6 +436,7 @@ body {
     min-height: 100vh;
     min-width: 102vw;
     display: block;
+    opacity: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     -webkit-transition: .2s ease-in-out;
@@ -445,6 +452,7 @@ body {
     display: block;
     font-size: 8rem;
     font-weight: 600;
+    z-index: 999;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -562,7 +570,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 22.5em) {
+@media only screen and (max-width: 24em) {
   .penyebaran h2 {
     font-size: 2.8rem;
   }
@@ -638,13 +646,13 @@ body {
 
 @media only screen and (max-width: 48em) {
   .penyebaran .items .item label {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 
 @media only screen and (max-width: 22.5em) {
   .penyebaran .items .item label {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -655,14 +663,149 @@ body {
 
 @media only screen and (max-width: 48em) {
   .penyebaran .items .item p {
-    font-size: 3.5rem;
+    font-size: 2.6rem;
   }
 }
 
 @media only screen and (max-width: 22.5em) {
   .penyebaran .items .item p {
-    font-size: 2.7rem;
+    font-size: 1.8rem;
   }
+}
+
+.daftar-provinsi {
+  padding: 2rem;
+}
+
+.daftar-provinsi h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.9rem;
+}
+
+@media only screen and (max-width: 48em) {
+  .daftar-provinsi h2 {
+    font-size: 3.2rem;
+  }
+}
+
+.daftar-provinsi h2 span {
+  color: var(--color-tertiary);
+}
+
+.daftar-provinsi h2 img {
+  margin-left: .7rem;
+}
+
+.daftar-provinsi table {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  border-collapse: collapse;
+  min-width: 100%;
+}
+
+@media only screen and (max-width: 48em) {
+  .daftar-provinsi table {
+    margin-top: 3rem;
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 22.5em) {
+  .daftar-provinsi table {
+    font-size: 1.8rem;
+  }
+}
+
+.daftar-provinsi table .provinsi {
+  font-weight: 600;
+}
+
+.daftar-provinsi table thead {
+  text-align: left;
+}
+
+.daftar-provinsi table thead .people-heading {
+  text-align: center;
+}
+
+.daftar-provinsi table thead th {
+  font-weight: normal;
+  padding-bottom: 1rem;
+  padding-right: 7rem;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 79.2em) {
+  .daftar-provinsi table thead th {
+    padding-right: 5rem;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  .daftar-provinsi table thead th {
+    padding-right: 3rem;
+  }
+}
+
+@media only screen and (max-width: 22.5em) {
+  .daftar-provinsi table thead th:not(:first-of-type) {
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 20em) {
+  .daftar-provinsi table thead th {
+    padding-right: 2rem;
+  }
+}
+
+.daftar-provinsi table tbody {
+  height: 3rem;
+  overflow-y: auto;
+}
+
+.daftar-provinsi table tbody .people {
+  width: 100%;
+  text-align: center;
+}
+
+.daftar-provinsi table tbody td {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 8rem;
+}
+
+@media only screen and (max-width: 79.2em) {
+  .daftar-provinsi table tbody td {
+    padding-right: 6rem;
+  }
+}
+
+@media only screen and (max-width: 26em) {
+  .daftar-provinsi table tbody td {
+    padding-right: 4rem;
+  }
+}
+
+@media only screen and (max-width: 22.5em) {
+  .daftar-provinsi table tbody td:not(:first-of-type) {
+    padding-right: 4rem;
+  }
+}
+
+@media only screen and (max-width: 20em) {
+  .daftar-provinsi table tbody td {
+    padding-right: 2rem;
+  }
+}
+
+.daftar-provinsi table tbody tr {
+  border-bottom: 1px solid var(--color-grey);
 }
 
 .daftar-negara {
@@ -714,32 +857,7 @@ body {
 }
 
 .daftar-negara table .negara {
-  padding-right: 10rem;
   font-weight: 600;
-}
-
-@media only screen and (max-width: 79.2em) {
-  .daftar-negara table .negara {
-    padding-right: 8rem;
-  }
-}
-
-@media only screen and (max-width: 26em) {
-  .daftar-negara table .negara {
-    padding-right: 6rem;
-  }
-}
-
-@media only screen and (max-width: 22.5em) {
-  .daftar-negara table .negara {
-    padding-right: 2rem;
-  }
-}
-
-@media only screen and (max-width: 20em) {
-  .daftar-negara table .negara {
-    padding-right: 2rem;
-  }
 }
 
 .daftar-negara table thead {
