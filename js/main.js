@@ -53,7 +53,7 @@ const app = new Vue({
       // terkonfirmasi
       axios.get(`https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/Statistik_Perkembangan_COVID19_Indonesia/FeatureServer/0/query?f=json&where=Tanggal%3E%3Dtimestamp%20%272020-03-18%2016%3A00%3A00%27%20AND%20Tanggal%3C%3Dtimestamp%20%272020-03-19%2015%3A59%3A59%27&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Jumlah_Kasus_Kumulatif%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true
       `).then((response)=>{
-        this.detail.confirmed = response.data.features[0].attributes.value
+        this.detail.confirmed = response.data.features[0].attributes.value+1
       }).catch((err)=>console.log(err))
 
       // dalam perawatan
