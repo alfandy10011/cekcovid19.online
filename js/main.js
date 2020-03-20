@@ -168,7 +168,7 @@ const app = new Vue({
 
         if (arr.length === 1) {
           if(newVal == 'Indonesia'){
-            alert("data Indonesia beralih sumber menjadi John Hopkins University, refresh atau matikan hidupkan kembali app untuk mengembalikan sumber menjadi Badan Nasional Penanggulangan Bencana")
+            alert("Ada perubahaan data. Data beralih sumber menjadi John Hopkins University, refresh atau matikan hidupkan kembali app untuk mengembalikan sumber menjadi Badan Nasional Penanggulangan Bencana")
             this.negara = newVal;
             // this.sumber = 'Badan Nasional Penanggulangan Bencana'
           }else{
@@ -233,24 +233,13 @@ const app = new Vue({
     this.worldCase();
     this.getListCountry();
   },
-  mounted: function mounted(){    
+  updated: function updated(){    
 
-    // var once = true
-
-    // if(once === true){
-    //   once = false
-    //   this.listCountry.map(item => {
-    //     if(item.country === "Indonesia"){
-    //       item.confirmed = this.detail.confirmed;
-    //       item.active = this.detail.active;
-    //       item.recovered = this.detail.recovered;
-    //       item.deaths = this.detail.deaths;
-    //     }
-    //   })
-    // }
-
-    // console.log(once);
-    
+    if(this.negara !== 'Indonesia'){
+      document.querySelector('.daftar-provinsi').style.display = 'none'
+    }else{
+      document.querySelector('.daftar-provinsi').style.display = 'block'
+    }
 
   }
 });
