@@ -433,13 +433,25 @@ background: var(--color-tertiary-darken);
         justify-content: space-around;
         margin: 1.5rem 0;
         .item{
+            @media only screen and (max-width: 22.5em){
+                &:not(:last-of-type){
+                    border-right: 1px solid var(--color-grey);
+                    text-align: center;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
+                &:last-of-type{
+                    text-align: center;
+                    padding-left: 1rem;
+                }
+            }
             label{
                 font-size: 1.4rem;
                 @media only screen and (max-width: 48em){
-                    font-size: 1.6rem;
+                    font-size: 1.8rem;
                 }
                 @media only screen and (max-width: 22.5em){
-                    font-size: 1.4rem;
+                    font-size: 1.6rem;
                 }
             }
             p{
