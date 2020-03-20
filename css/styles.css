@@ -358,7 +358,7 @@ body {
   margin: 0;
   background-color: var(--color-tertiary);
   min-height: 7rem;
-  min-width: 103vw;
+  min-width: 100vw;
   z-index: 999;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,7 +380,7 @@ body {
 
 @media only screen and (max-width: 22.5em) {
   .mobile-nav {
-    min-width: 108vw;
+    min-width: 100vw;
   }
 }
 
@@ -534,6 +534,7 @@ body {
 
 .penyebaran {
   background-color: var(--color-primary);
+  max-width: 100vw !important;
   padding: 4rem;
   margin-top: 2rem;
 }
@@ -573,6 +574,12 @@ body {
 @media only screen and (max-width: 24em) {
   .penyebaran h2 {
     font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 22.6em) {
+  .penyebaran h2 {
+    font-size: 2.4rem;
   }
 }
 
@@ -693,7 +700,19 @@ body {
   }
 }
 
-.daftar-provinsi h2 span {
+@media only screen and (max-width: 24em) {
+  .daftar-provinsi h2 {
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 22.6em) {
+  .daftar-provinsi h2 {
+    font-size: 2.4rem;
+  }
+}
+
+.daftar-provinsi h2 b {
   color: var(--color-tertiary);
 }
 
@@ -828,6 +847,18 @@ body {
   }
 }
 
+@media only screen and (max-width: 24em) {
+  .daftar-negara h2 {
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 22.6em) {
+  .daftar-negara h2 {
+    font-size: 2.4rem;
+  }
+}
+
 .daftar-negara h2 span {
   color: var(--color-tertiary);
 }
@@ -840,7 +871,7 @@ body {
   margin-top: 1rem;
   font-size: 1.6rem;
   border-collapse: collapse;
-  min-width: 100%;
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 48em) {
@@ -850,9 +881,15 @@ body {
   }
 }
 
+@media only screen and (max-width: 24em) {
+  .daftar-negara table {
+    font-size: 1.5rem;
+  }
+}
+
 @media only screen and (max-width: 22.5em) {
   .daftar-negara table {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -877,25 +914,13 @@ body {
 
 @media only screen and (max-width: 79.2em) {
   .daftar-negara table thead th {
-    padding-right: 5rem;
+    padding-right: 6rem;
   }
 }
 
 @media only screen and (max-width: 26em) {
   .daftar-negara table thead th {
-    padding-right: 3rem;
-  }
-}
-
-@media only screen and (max-width: 22.5em) {
-  .daftar-negara table thead th:not(:first-of-type) {
-    padding-right: 2rem;
-  }
-}
-
-@media only screen and (max-width: 20em) {
-  .daftar-negara table thead th {
-    padding-right: 2rem;
+    padding-right: 1.5rem;
   }
 }
 
@@ -905,7 +930,6 @@ body {
 }
 
 .daftar-negara table tbody .people {
-  width: 100%;
   text-align: center;
 }
 
@@ -923,19 +947,7 @@ body {
 
 @media only screen and (max-width: 26em) {
   .daftar-negara table tbody td {
-    padding-right: 4rem;
-  }
-}
-
-@media only screen and (max-width: 22.5em) {
-  .daftar-negara table tbody td:not(:first-of-type) {
-    padding-right: 4rem;
-  }
-}
-
-@media only screen and (max-width: 20em) {
-  .daftar-negara table tbody td {
-    padding-right: 2rem;
+    padding-right: 1.5rem;
   }
 }
 

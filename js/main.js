@@ -168,7 +168,7 @@ const app = new Vue({
 
         if (arr.length === 1) {
           if(newVal == 'Indonesia'){
-            alert("data Indonesia beralih sumber menjadi John Hopkins University, refresh atau matikan hidupkan app untuk mengembalikan sumber menjadi Badan Nasional Penanggulangan Bencana")
+            alert("data Indonesia beralih sumber menjadi John Hopkins University, refresh atau matikan hidupkan kembali app untuk mengembalikan sumber menjadi Badan Nasional Penanggulangan Bencana")
             this.negara = newVal;
             // this.sumber = 'Badan Nasional Penanggulangan Bencana'
           }else{

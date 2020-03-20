@@ -111,7 +111,7 @@
                 </div>
 
                 <div class="daftar-provinsi">
-                    <h2>Daftar Provinsi yang&nbsp;<b style="color: var(--color-tertiary)">Terkonfirmasi</b> <img src="./images/down.svg" alt="down"></h2>
+                    <h2>Daftar Provinsi yang&nbsp;<b>Terkonfirmasi</b> <img src="./images/down.svg" alt="down"></h2>
                     <table id="myTable">
                         <thead>
                             <tr rowspan="2">
@@ -137,7 +137,7 @@
                     <table id="myTable">
                         <thead>
                             <tr rowspan="2">
-                                <th>No.</th>
+                                <th class="no">No.</th>
                                 <th class="negara">Negara</th>
                                 <th class="people-heading">Terkonfirmasi</th>
                                 <th class="people-heading recovered">Sembuh</th>
@@ -146,7 +146,7 @@
                         </thead>
                         <tbody v-for="{country, confirmed, recovered, deaths}, index in listCountry" :key="index">
                             <tr>
-                                <td>{{index+1}}</td>
+                                <td class="no">{{index+1}}</td>
                                 <td class="negara">{{country}}</td>
                                 <td class="people">{{confirmed}}</td>
                                 <td class="people">{{recovered}}</td>
