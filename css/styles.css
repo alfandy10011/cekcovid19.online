@@ -47,7 +47,7 @@ html {
   }
 }
 
-@media only screen and (max-width: 22.5em) {
+@media only screen and (max-width: 25em) {
   html {
     font-size: 40%;
   }
@@ -566,13 +566,13 @@ body {
   }
 }
 
-@media only screen and (max-width: 24em) {
+@media only screen and (max-width: 27em) {
   .penyebaran h2 {
     font-size: 2.8rem;
   }
 }
 
-@media only screen and (max-width: 22.6em) {
+@media only screen and (max-width: 25em) {
   .penyebaran h2 {
     font-size: 2.4rem;
   }
@@ -615,7 +615,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 22.5em) {
+@media only screen and (min-width: 25em) {
   .penyebaran .description p {
     font-size: 1rem;
   }
@@ -665,7 +665,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 22.5em) {
+@media only screen and (max-width: 25em) {
   .penyebaran .items .item label {
     font-size: 1.6rem;
   }
@@ -682,7 +682,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 22.5em) {
+@media only screen and (max-width: 25em) {
   .penyebaran .items .item p {
     font-size: 2.2rem;
   }
@@ -708,13 +708,13 @@ body {
   }
 }
 
-@media only screen and (max-width: 24em) {
+@media only screen and (max-width: 27em) {
   .daftar-provinsi h2 {
     font-size: 2.8rem;
   }
 }
 
-@media only screen and (max-width: 22.6em) {
+@media only screen and (max-width: 25em) {
   .daftar-provinsi h2 {
     font-size: 2.4rem;
   }
@@ -742,7 +742,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 22.5em) {
+@media only screen and (max-width: 25em) {
   .daftar-provinsi table {
     font-size: 1.8rem;
   }
@@ -779,7 +779,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 22.5em) {
+@media only screen and (max-width: 25em) {
   .daftar-provinsi table thead th:not(:first-of-type) {
     padding-right: 2rem;
   }
@@ -819,7 +819,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 22.5em) {
+@media only screen and (max-width: 25em) {
   .daftar-provinsi table tbody td:not(:first-of-type) {
     padding-right: 4rem;
   }
@@ -855,13 +855,13 @@ body {
   }
 }
 
-@media only screen and (max-width: 24em) {
+@media only screen and (max-width: 27em) {
   .daftar-negara h2 {
     font-size: 2.8rem;
   }
 }
 
-@media only screen and (max-width: 22.6em) {
+@media only screen and (max-width: 25em) {
   .daftar-negara h2 {
     font-size: 2.4rem;
   }
@@ -889,13 +889,13 @@ body {
   }
 }
 
-@media only screen and (max-width: 24em) {
+@media only screen and (max-width: 27em) {
   .daftar-negara table {
     font-size: 1.8rem;
   }
 }
 
-@media only screen and (max-width: 22.5em) {
+@media only screen and (max-width: 25em) {
   .daftar-negara table {
     font-size: 1.6rem;
   }
