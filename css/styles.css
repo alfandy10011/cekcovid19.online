@@ -883,13 +883,13 @@ body {
 
 @media only screen and (max-width: 24em) {
   .daftar-negara table {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
 @media only screen and (max-width: 22.5em) {
   .daftar-negara table {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 
