@@ -128,14 +128,16 @@
                                 <th>No.</th>
                                 <th class="provinsi">Provinsi</th>
                                 <th class="people-heading">Terkonfirmasi</th>
+                                <th class="people-heading recovered">Sembuh</th>
                                 <th class="people-heading death">Meninggal</th>
                             </tr>
                         </thead>
-                        <tbody v-for="{province, confirmed, deaths}, index in listProvince" :key="index">
+                        <tbody v-for="{province, confirmed, recovered, deaths}, index in listProvince" :key="index">
                             <tr>
                                 <td>{{index+1}}</td>
                                 <td class="provinsi">{{province}}</td>
                                 <td class="people">{{confirmed}}</td>
+                                <td class="people">{{recovered}}</td>
                                 <td class="people">{{deaths}}</td>
                             </tr>
                         </tbody>
