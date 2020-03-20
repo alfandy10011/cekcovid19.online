@@ -51,23 +51,12 @@ const app = new Vue({
   methods: {
     ambilDetail: function ambilDetail() {
 
-      // dalam perawatan
-      axios.get(`https://services8.arcgis.com/mpSDBlkEzjS62WgX/arcgis/rest/services/Kasus_COVID19_Indonesia_gsheet/FeatureServer/0/query?f=json&where=(Provinsi%20%3D%20%27Indonesia%27)%20OR%20(Provinsi%20%3C%3E%20%27Indonesia%27)&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Dalam_Perawatan_%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&outSR=102100&cacheHint=true
-      `).then((response)=>{
-        this.detail.active = response.data.features[0].attributes.value
+      axios.get(`https://kawalcovid19.harippe.id/api/summary`).then((response)=>{
+        this.detail.confirmed = response.data.confirmed.value
+        this.detail.active = response.data.activeCare.value
+        this.detail.recovered = response.data.recovered.value
+        this.detail.deaths = response.data.deaths.value
       }).catch((err)=>console.log(err))
-
-      // sembuh
-      axios.get(`https://services8.arcgis.com/mpSDBlkEzjS62WgX/arcgis/rest/services/Kasus_COVID19_Indonesia_gsheet/FeatureServer/0/query?f=json&where=(Provinsi%20%3D%20%27Indonesia%27)%20OR%20(Provinsi%20%3C%3E%20%27Indonesia%27)&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Sembuh_%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&outSR=102100&cacheHint=true`).then((response)=>{
-        this.detail.recovered = response.data.features[0].attributes.value
-      }).catch((err)=>console.log(err))
-
-      // meninggal
-      axios.get(`https://services8.arcgis.com/mpSDBlkEzjS62WgX/arcgis/rest/services/Kasus_COVID19_Indonesia_gsheet/FeatureServer/0/query?f=json&where=(Provinsi%20%3D%20%27Indonesia%27)%20OR%20(Provinsi%20%3C%3E%20%27Indonesia%27)&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Meninggal_%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&outSR=102100&cacheHint=true
-      `).then((response)=>{
-        this.detail.deaths = response.data.features[0].attributes.value
-      }).catch((err)=>console.log(err))
-      
 
     },
     getListProvince: function getListProvince(){
@@ -236,8 +225,6 @@ const app = new Vue({
     }else{
       document.querySelector('.daftar-provinsi').style.display = 'block'
     }
-
-    this.detail.confirmed = this.detail.recovered + this.detail.active + this.detail.deaths
 
   }
 });
