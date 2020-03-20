@@ -732,7 +732,7 @@ body {
   margin-top: 1rem;
   font-size: 1.6rem;
   border-collapse: collapse;
-  min-width: 100%;
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 48em) {
@@ -742,9 +742,15 @@ body {
   }
 }
 
-@media only screen and (max-width: 25em) {
+@media only screen and (max-width: 27em) {
   .daftar-provinsi table {
     font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .daftar-provinsi table {
+    font-size: 1.6rem;
   }
 }
 
@@ -769,25 +775,13 @@ body {
 
 @media only screen and (max-width: 79.2em) {
   .daftar-provinsi table thead th {
-    padding-right: 5rem;
+    padding-right: 6rem;
   }
 }
 
 @media only screen and (max-width: 26em) {
   .daftar-provinsi table thead th {
-    padding-right: 3rem;
-  }
-}
-
-@media only screen and (max-width: 25em) {
-  .daftar-provinsi table thead th:not(:first-of-type) {
-    padding-right: 2rem;
-  }
-}
-
-@media only screen and (max-width: 20em) {
-  .daftar-provinsi table thead th {
-    padding-right: 2rem;
+    padding-right: 1.5rem;
   }
 }
 
@@ -797,7 +791,6 @@ body {
 }
 
 .daftar-provinsi table tbody .people {
-  width: 100%;
   text-align: center;
 }
 
@@ -815,19 +808,7 @@ body {
 
 @media only screen and (max-width: 26em) {
   .daftar-provinsi table tbody td {
-    padding-right: 4rem;
-  }
-}
-
-@media only screen and (max-width: 25em) {
-  .daftar-provinsi table tbody td:not(:first-of-type) {
-    padding-right: 4rem;
-  }
-}
-
-@media only screen and (max-width: 20em) {
-  .daftar-provinsi table tbody td {
-    padding-right: 2rem;
+    padding-right: 1.5rem;
   }
 }
 

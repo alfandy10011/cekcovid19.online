@@ -493,21 +493,32 @@ background: var(--color-tertiary-darken);
         margin-top: 1rem;
         font-size: 1.6rem;
         border-collapse: collapse;
-        min-width: 100%;
+        max-width: 100%;
         @media only screen and (max-width: 48em){
             margin-top: 3rem;
             font-size: 2.2rem;
         }
-        @media only screen and (max-width: 25em){
+        @media only screen and (max-width: 27em){
             font-size: 1.8rem;
+        }
+        @media only screen and (max-width: 25em){
+            font-size: 1.6rem;
         }
         .provinsi{
             font-weight: 600;
+            // width: 10%;
         }
+        // .no{
+        //     width: 0%;
+        // }
         thead{
             text-align: left;
+            // .no{
+            //     width: 10%;
+            // }
             .people-heading{
                 text-align: center;
+                // width: 10%;
             }
             th{
                 font-weight: normal;
@@ -515,18 +526,10 @@ background: var(--color-tertiary-darken);
                 padding-right: 7rem;
                 font-weight: 600;
                 @media only screen and (max-width: 79.2em){
-                    padding-right: 5rem;
+                    padding-right: 6rem;
                  }
                  @media only screen and (max-width: 26em){
-                    padding-right: 3rem;
-                 }
-                 @media only screen and (max-width: 25em){
-                     &:not(:first-of-type){
-                         padding-right: 2rem;
-                     }
-                 }
-                 @media only screen and (max-width: 20em){
-                    padding-right: 2rem;
+                    padding-right: 1.5rem;
                  }
             }
         }
@@ -534,8 +537,8 @@ background: var(--color-tertiary-darken);
             height: 3rem;
             overflow-y: auto;
             .people{
-                width: 100%;
                 text-align: center;
+                // width: 10%;
             }
             td{
                 padding-top: 1rem;
@@ -545,15 +548,7 @@ background: var(--color-tertiary-darken);
                    padding-right: 6rem;
                 }
                 @media only screen and (max-width: 26em){
-                   padding-right: 4rem;
-                }
-                @media only screen and (max-width: 25em){
-                    &:not(:first-of-type){
-                        padding-right: 4rem;
-                    }
-                }
-                @media only screen and (max-width: 20em){
-                   padding-right: 2rem;
+                   padding-right: 1.5rem;
                 }
             }
             tr{
