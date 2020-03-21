@@ -56,16 +56,17 @@ const app = new Vue({
         this.detail.active = response.data.activeCare.value
         this.detail.recovered = response.data.recovered.value
         this.detail.deaths = response.data.deaths.value
-      }).catch((err)=>console.log(err))
 
-    },
-    getListProvince: function getListProvince(){
-      axios.get(`https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?f=json&returnGeometry=true&spatialRel=esriSpatialRelIntersects&geometry=%7B%22xmin%22%3A10018754.17139158%2C%22ymin%22%3A-2504688.54284646%2C%22xmax%22%3A12523442.714239955%2C%22ymax%22%3A0.000001914799213409424%2C%22spatialReference%22%3A%7B%22wkid%22%3A102100%2C%22latestWkid%22%3A3857%7D%7D&geometryType=esriGeometryEnvelope&inSR=102100&outFields=*&orderByFields=Kasus_Terkonfirmasi_Akumulatif%20DESC&outSR=102100&resultType=tile`).then((response)=>{
-        const d = new Date(response.data.features[0].attributes.Pembaruan)
+        const d = new Date(response.data.metadata.lastUpdatedAt)
         const dtf = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false}) 
         const [{ value: mo },,{ value: da },,{ value: ye },,{value:hour},,{value:minute},,{value:second}] = dtf.formatToParts(d) 
         
         this.detail.lastUpdate = `${da} ${mo} ${ye} ${hour}:${minute}:${second}`
+      }).catch((err)=>console.log(err))
+
+    },
+    getListProvince: function getListProvince(){
+      axios.get(`https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?f=json&where=Provinsi%20%3C%3E%20%27Indonesia%27&returnGeometry=false&outFields=*&orderByFields=Kasus_Terkonfirmasi_Akumulatif%20desc`).then((response)=>{
 
         let arr = []
         for(let i = 0; i < response.data.features.length; i++){
